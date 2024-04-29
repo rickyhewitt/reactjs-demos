@@ -1,0 +1,232 @@
+:root {
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violent: hsl(278, 68%, 11%);
+}
+
+html {
+}
+
+body {
+  /* background: transparent url(./images/bg-main-mobile.png) top left no-repeat; */
+  /* padding: 28px 24px 0px 24px; */
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+input,
+form,
+label,
+button {
+  font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  background: transparent url(./images/bg-main-mobile.png) top left no-repeat;
+  width: 100%;
+  height: 150px;
+  padding: 24px 16px;
+  margin-bottom: 64px;
+  border-bottom: 1px solid gray;
+}
+
+/* div.card-back img,
+div.card-front img { */
+/* 
+        Borders less than 1px seem to work on my macbook pro 2015 (retina), 
+        but I'm not sure how well it'll look on non-retina displays 
+
+        Most likely it will be rendered as 1px on some displays.
+        Interestingly, I can tell a difference between 0.1px & 0.5px? (I think..)
+    */
+/* border: 0.3px solid rgba(100, 100, 100, 0.95);
+  border-radius: 8px;
+} */
+div.card-front {
+  position: relative;
+  top: -60px;
+  left: 18px;
+  width: 250px;
+  height: 140px;
+  background: transparent url(./images/bg-card-front.png) top left no-repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 70%;
+}
+
+div.card-back {
+  position: relative;
+  left: 80px;
+  width: 250px;
+  height: 140px;
+  background: transparent url(./images/bg-card-back.png) top left no-repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 70%;
+}
+
+div.card-front .image {
+  position: relative;
+  left: 16px;
+  top: 16px;
+}
+
+#render_cvc,
+#render_name,
+#render_number,
+#render_month,
+#render_year {
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-weight: lighter;
+}
+#render_cvc {
+  right: 30px;
+  top: 60px;
+  font-size: 90%;
+}
+#render_name {
+  bottom: 16px;
+  left: 16px;
+  font-size: 75%;
+}
+#render_number {
+  top: 72px;
+  left: 16px;
+  font-size: 140%;
+}
+#render_month {
+  bottom: 16px;
+  right: 38px;
+  font-size: 75%;
+}
+#render_year {
+  bottom: 16px;
+  right: 25px;
+  font-size: 75%;
+}
+
+label {
+  text-transform: uppercase;
+  color: var(--very-dark-violent);
+  font-size: 60%;
+  margin-bottom: 6px;
+  display: block;
+}
+
+fieldset {
+  border: 0px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+button {
+  color: white;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #220930;
+  border: 0px;
+  margin-top: 8px;
+  border-radius: 6px;
+  margin-bottom: 64px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #c1c1c3;
+  appearance: textfield;
+}
+input::placeholder {
+  color: #c1c1c3;
+}
+
+fieldset .error {
+  color: red;
+  font-size: 60%;
+  font-weight: lighter;
+  display: none;
+  margin-top: 2px;
+}
+
+section#body {
+  margin: 0px 16px;
+}
+
+section.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+fieldset section.grid {
+  column-gap: 8px;
+}
+
+section.grid fieldset:first-child {
+  margin-right: 16px;
+}
+
+#complete {
+  display: none;
+  text-align: center;
+  margin: 80px 16px 0px 16px;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 27% 73%;
+  }
+  header {
+    height: 100vh;
+    background: transparent url(./images/bg-main-desktop.png) top left no-repeat;
+    height: 100vh;
+    padding: 24px 16px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+  }
+  section#body,
+  section#complete {
+    /* padding: 256px; */
+    margin-top: 140px;
+    padding: 0px 200px 0px 260px;
+  }
+
+  div.card-front {
+    top: -70px;
+    left: 150px;
+  }
+  div.card-back {
+    top: 230px;
+    left: 200px;
+  }
+
+  #render_year {
+    right: 22px;
+  }
+  #render_number {
+    font-size: 135%;
+  }
+}

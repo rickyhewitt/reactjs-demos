@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="card-back">
+        <div id="render_cvc"></div>
+      </div>
+      <div class="card-front">
+        <div class="image">
+          <img src="./images/card-logo.svg" alt="" width="52" />
+        </div>
+        <div id="render_name"></div>
+        <div id="render_number"></div>
+        <div id="render_month"></div>
+        <div id="render_year"></div>
+      </div>
+    </header>
+
+    <section id="body">
+      <fieldset>
+        <label for="name">Cardholder Name</label>
+        <input
+          name="name"
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+          class="interactive"
+          id="input_name"
+          maxlength="20"
+        />
+        <span id="name_error" class="error">Name must be present</span>
+      </fieldset>
+      <fieldset>
+        <label for="cardnumber">Card Number</label>
+        <input
+          name="cardnumber"
+          type="tel"
+          placeholder="e.g. 1234 5678 9123 0000"
+          class="interactive"
+          id="input_number"
+          pattern="[0-9\s]{13,19}"
+          autocomplete="cc-number"
+          maxlength="19"
+        />
+        <span id="number_error" class="error">Wrong format</span>
+      </fieldset>
+
+      <section class="grid">
+        <fieldset>
+          <label for="exp_month">Expiry Date (mm/yy)</label>
+          <section class="grid">
+            <div>
+              <input
+                name="exp_month"
+                type="text"
+                placeholder="MM"
+                id="input_month"
+                maxlength="2"
+              />
+              <span id="exp_month_error" class="error">Incorrect month</span>
+            </div>
+
+            <div>
+              <input
+                name="exp_year"
+                type="text"
+                placeholder="YY"
+                id="input_year"
+                maxlength="2"
+              />
+              <span id="exp_year_error" class="error">Incorrect year</span>
+            </div>
+          </section>
+        </fieldset>
+        <fieldset>
+          <label for="cvc">CVC</label>
+          <input
+            name="cvc"
+            type="text"
+            placeholder="e.g. 123"
+            id="input_cvc"
+            maxlength="3"
+          />
+          <span id="cvc_error" class="error">CVC must be 3 digits</span>
+        </fieldset>
+      </section>
+
+      <button id="submit">Confirm</button>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://rickyhewitt.me">Ricky Hewitt</a>.
+      </div>
+    </section>
+
+    <section id="complete">
+      <img src="./images/icon-complete.svg" alt="Complete" />
+
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details</p>
+      <button onclick="javascript: window.location.href = '';">Continue</button>
+    </section>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

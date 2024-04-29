@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desat-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-gray-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+}
+
+body {
+  background-color: #fff;
+  /* background-color: #f9f8fe; */
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway; /*, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+p {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: var(--very-dark-blue);
+  font-size: 90%;
+}
+
+form,
+input,
+button {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.1px;
+}
+
+input[type="email"] {
+  border: 1px solid var(--very-dark-blue);
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  color: white;
+  background-color: var(--bright-blue);
+  box-shadow: 2px 1px rgb(70, 70, 70, 0.1);
+  border: 0px;
+  border-radius: 5px;
+  margin-top: 16px;
+  padding: 8px;
+  font-size: 120%;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+/*
+    Header
+*/
+header .container {
+  display: grid;
+  grid-template-columns: 40% auto;
+  margin-top: 32px;
+  background-color: #fff;
+}
+
+header div.logo img {
+  width: 100px;
+}
+
+header ul.nav {
+  list-style: none;
+  text-align: right;
+  margin: 4px 0 0 0;
+  padding: 0;
+}
+header ul.nav li {
+  display: inline-block;
+  margin-right: 24px;
+  color: var(--very-dark-blue);
+  font-size: 90%;
+  font-family: Raleway;
+  font-weight: 400;
+}
+header ul.nav li:last-child {
+  margin-right: 0;
+}
+
+/* 
+    Sign up
+*/
+
+section.signup {
+  margin-top: 90px;
+  text-align: center;
+  background: transparent url(./images/bg-curve-mobile.svg) bottom center
+    no-repeat;
+  padding-bottom: 128px;
+}
+section.signup .container {
+  display: grid;
+  grid-template-columns: 100%;
+}
+section.signup .hero {
+}
+section.signup .hero img {
+  width: 300px;
+}
+section.signup h2 {
+  letter-spacing: 0.2px;
+  font-size: 165%;
+}
+
+.section.signup form {
+  margin-top: 32px;
+}
+
+/* 
+    Testimonials
+*/
+section.testimonials {
+  margin-top: 0px;
+  padding-bottom: 64px;
+  background: #f9f8fe none 10px center no-repeat;
+}
+section.testimonials .hero {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 48px;
+  margin-bottom: 64px;
+}
+section.testimonials .hero img {
+  width: 300px;
+}
+
+section.testimonials h3 {
+  text-align: center;
+  font-size: 105%;
+  margin-bottom: 32px;
+}
+section.testimonials p {
+  color: var(--desat-blue);
+  margin-bottom: 32px;
+}
+section.testimonials a {
+  color: var(--moderate-cyan);
+  border-bottom: 1px solid var(--moderate-cyan);
+  padding-bottom: 4px;
+  text-decoration: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.fa-circle-arrow-right {
+  margin-left: 4px;
+}
+
+section.testimonials .card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 5px;
+  box-shadow: 0px 1px rgb(40, 40, 40, 0.1);
+  margin: 32px 16px 0px 16px;
+  text-align: left;
+}
+section.testimonials .card h3 {
+  text-align: left;
+  margin: 0;
+}
+section.testimonials .card p {
+  font-size: 80%;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 90%;
+}
+.profile .desc {
+  margin-left: 16px;
+}
+.profile .desc h3,
+.profile .desc h6 {
+  margin: 0;
+}
+.profile .desc h6 {
+  margin-top: 4px;
+  font-weight: normal;
+}
+
+/* Early access */
+section.earlyaccess {
+  margin-top: 0px;
+  background-color: var(--desat-blue);
+  padding: 48px 0px 64px 0px;
+  text-align: center;
+}
+section.earlyaccess h2 {
+  margin: 0;
+  color: white;
+}
+section.earlyaccess p {
+  color: white;
+  margin-bottom: 24px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--very-dark-blue);
+  color: white;
+  padding: 48px 0px 64px 0px;
+}
+footer > * {
+  color: white;
+  font-size: 110%;
+}
+footer .logo {
+  margin-bottom: 32px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 48px;
+}
+footer ul li {
+  margin-bottom: 16px;
+}
+footer ul li svg {
+  margin-right: 16px;
+  width: 32px;
+}
+
+footer .social {
+  text-align: center;
+}
+
+footer div.icon {
+  width: 32px;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 16px;
+  height: 28px;
+  padding-top: 4px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    /* width: 1100px; */
+    margin: 0 auto;
+  }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Signup */
+
+  section.signup {
+    background: transparent url(./images/bg-curve-desktop.svg) bottom center
+      no-repeat;
+    padding-bottom: 210px;
+  }
+
+  section.signup .container {
+    display: grid;
+    grid-template-columns: 45% auto;
+  }
+
+  section.signup .container section.hero {
+    order: 2;
+    text-align: right;
+  }
+  section.signup .hero img {
+    width: 400px;
+  }
+
+  section.signup .container article {
+    order: 1;
+    text-align: left;
+  }
+
+  /* Testimonials */
+  section.testimonials .container {
+    display: grid;
+    grid-template-columns: 45% auto;
+  }
+  section.testimonials .container .hero {
+    text-align: right;
+  }
+  section.testimonials .container .hero img {
+    width: 400px;
+  }
+  section.testimonials .container article h3 {
+    font-size: 120%;
+  }
+  section.testimonials .container article h3,
+  section.testimonials .container article .center {
+    text-align: left;
+  }
+  section.testimonials article p {
+    margin-bottom: 16px;
+  }
+  section.testimonials .container article {
+    order: -1;
+    text-align: left;
+  }
+  section.testimonials .container article .card {
+    margin-left: 0;
+  }
+
+  section.earlyaccess .container {
+    display: grid;
+    grid-template-columns: 60% auto;
+  }
+  section.earlyaccess article {
+    text-align: left;
+    margin-right: 128px;
+  }
+  section.earlyaccess form {
+    text-align: right;
+  }
+  section.earlyaccess form button {
+    width: 50%;
+    float: left;
+  }
+
+  footer .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  footer .nav,
+  footer .social {
+    margin-top: 64px;
+  }
+  footer .social {
+    text-align: right;
+  }
+}
